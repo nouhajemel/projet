@@ -1,4 +1,5 @@
 let heart_btn=document.getElementsByClassName("heart_btn")
+let cart_btn=document.getElementsByClassName("cart-btn")
 let closee=document.getElementsByClassName("close")
 let more=document.getElementsByClassName("more")
 let btnmore=document.getElementsByClassName("btnmore")
@@ -21,7 +22,16 @@ for (let index = 0; index < more.length; index++) {
     }
     
   })
- 
+  cart_btn[index].addEventListener("click", function(){
+    var thecolor1=cart_btn[index].style.color;
+    if (thecolor1===pink){
+      cart_btn[index].style.color=purple
+    }
+    else{
+      cart_btn[index].style.color=pink
+    }
+    
+  })
   btnmore[index].addEventListener("click",function(){
     more[index].style.display="flex"
   })
